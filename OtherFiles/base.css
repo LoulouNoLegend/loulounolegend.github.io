@@ -20,7 +20,7 @@ a:visited {
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    background-color: var(--NavFooter-Darky);
+    background-color: #16181a;
     color: white;
 }
 .navbar_logo-name {
