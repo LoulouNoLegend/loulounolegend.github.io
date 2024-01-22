@@ -8,6 +8,9 @@
     --LessDarky: #282b30;
     --VeryDark: #23272A;
 }
+body {
+    font-family: 'Teko', sans-serif;
+}
 a {
     color: var(--Blurple);
 }

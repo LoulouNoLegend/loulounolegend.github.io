@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat Saver Map Lookup</title>
+
+    <link rel="stylesheet" href="CSS/bs-lookup.css">
+    <link rel="shortcut icon" href="bsl-icon.ico">
+    <link rel="stylesheet" href="OtherFiles/base.css">
+    <script src="OtherFiles/base.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teko">
+</head>
+<script>
+    function getMapInfo() {
+        var mapId = document.getElementById('the-id').value;
+        var apiUrl = 'https://beatsaver.com/api/maps/id/' + mapId;
+        let difficulties = [];
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('mapName').innerText = data.name;
+                document.getElementById('author').innerText = 'by ' + data.uploader.name;
+                document.getElementById('mapDuration').innerText = 'Duration: ' + data.metadata.duration + 's';
+                document.getElementById('bpm').innerText = 'BPM: ' + data.metadata.bpm;
+                
+                // Parcourir chaque version dans data.versions
+                for(let i = 0; i < data.versions.length; i++) {
+                    let version = data.versions[i];
+
+                    // Parcourir chaque diff dans version.diffs
+                    for(let j = 0; j < version.diffs.length; j++) {
+                        let diff = version.diffs[j];
+
+                        // Si diff a une propriété 'difficulty', l'utiliser
+                        if(diff.difficulty) {
+                            difficulties.push(diff.difficulty);
+                        }
+                    }
+                }
+
+                // Créer une chaîne à partir des difficultés
+                let difficultyText = difficulties.join(', ');
+
+                document.getElementById('difficulties').innerText = 'Difficulties: ' + difficultyText;
+
+                document.getElementById('upvotes').innerText = 'Upvotes: ' + data.stats.upvotes;
+                document.getElementById('downvotes').innerText = 'Downvotes: ' + data.stats.downvotes;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+</script>
+
+<body>
+        <header>
+            <div class="navbar_header">
+                <div class="navbar_logo-name">
+                    <a href="index.html"><img src="images/LNL_pfp.gif" alt="Logo" height="300px"></a>
+                    <h1>LoulouNoLegend's page</h1>
+                </div>
+                <div class="navbar_dropdown">
+                    <div class="navbar_menu-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="navbar_dropdown-content">
+                        <a href="index.html"><p class="">Home</p></a>
+                        <a href=""><p class="currentpage">Beat Saver Map Lookup</p></a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="" title="Beat Saver Lookup">
+                <img src="bsl-icon.ico" width="50px">
+            </a>
+            <div class="navbar">
+                Beat Saver Map Lookup
+            </div>
+        </header>
+        <div class="container">
+            <div class="main">
+                <h2>Get the informations of a beat saver map by giving the ID</h2>
+                <h4>This program is made for fun, it's not really a serious thing.</h4>
+                
+                ID: <input class="text_box" type="text" id="the-id">
+
+                <br>
+                <br>
+
+                <button class="button" onclick="getMapInfo()">
+                    <label for="Info">Get map info</label>
+                </button>
+            </div>
+
+            <div class="info_box">
+                <div class="mapName" id="mapName">Map Name</div>
+                <div class="author" id="author">Author</div>
+                <div id="mapDuration">Duration: </div>
+                <div id="bpm">BPM: </div>
+                <div id="difficulties">Difficulties: </div>
+
+                <div class="stats">
+                    <div id="upvotes">Upvotes: </div>
+                    <div class="space"> | </div>
+                    <div id="downvotes">Downvotes: </div>
+                </div>
+            </div>
+        </div>
+    <p>Version 1.0</p>
+
+    <br>
+    <br>
+
+</div>
+</body>
+
+<footer>
+    <div class="footerbar_footer">
+        <div class="footerbar_logo">
+            <!-- <img src="images/LNL_pfp.gif" alt="Logo" height="50px"> -->
+            <p>©2024 LoulouNoLegend. All rights reserved.</p>
+            <!-- <p><a href="#">Conditions d'utilisation</a> • <a href="#">Politique de confidentialité</a></p> -->
+        </div>
+        <div class="footerbar_social">
+            <a href="https://www.youtube.com/channel/UClrvcohSvuff6DwONpFgx9w"><img src="images/youtube.png" alt="YouTube" height="40px"></a>
+        </div>
+    </div>
+</footer>
+
+</html>
