@@ -26,22 +26,22 @@
                 document.getElementById('mapDuration').innerText = 'Duration: ' + data.metadata.duration + 's';
                 document.getElementById('bpm').innerText = 'BPM: ' + data.metadata.bpm;
                 
-                // Parcourir chaque version dans data.versions
+                // Go trough versions (data.versions)
                 for(let i = 0; i < data.versions.length; i++) {
                     let version = data.versions[i];
 
-                    // Parcourir chaque diff dans version.diffs
+                    // Go trough the diffs
                     for(let j = 0; j < version.diffs.length; j++) {
                         let diff = version.diffs[j];
 
-                        // Si diff a une propriété 'difficulty', l'utiliser
+                        // if diff is a difficulty property, use it
                         if(diff.difficulty) {
                             difficulties.push(diff.difficulty);
                         }
                     }
                 }
 
-                // Créer une chaîne à partir des difficultés
+                // Create a chain with the difficulties
                 let difficultyText = difficulties.join(', ');
 
                 document.getElementById('difficulties').innerText = 'Difficulties: ' + difficultyText;
