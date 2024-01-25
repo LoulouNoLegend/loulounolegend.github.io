@@ -138,12 +138,3 @@ a:visited {
     bottom: 0;
     width: 100%;
 }
-
-.footer-gradiant {
-    height: 45px;
-    background: linear-gradient(to bottom, #23272A 0%, #16181a 100%);
-  }
-.header-gradiant {
-    height: 35px;
-    background: linear-gradient(to top, #23272A 0%, #16181a 100%);
-}
