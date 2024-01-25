@@ -43,8 +43,6 @@ a {
     background-color: var(--Faded-Blurple);
 }
 .header {
-    /* background-image: url('images/placeholder.png'); */
-    background-image: linear-gradient(#16181a, #23272A);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -130,10 +128,4 @@ a {
 }
 .footer .box {
     width: 50%;
-}
-.footer-separated {
-    margin-top: 10px;
-    background-image: linear-gradient(#23272A, #16181a);
-    background-position: center;
-    background-repeat: no-repeat;
 }

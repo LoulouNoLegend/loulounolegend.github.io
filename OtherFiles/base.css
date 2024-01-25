@@ -22,7 +22,10 @@ a:visited {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #16181a;
     color: white;
 }
@@ -63,7 +66,10 @@ a:visited {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: var(--NavFooter-Darky);
     color: var(--Grayple);
 }
@@ -115,4 +121,29 @@ a:visited {
 
 .currentpage {
     color: var(--Blurple);
+}
+.footer-separated {
+    margin-top: 10px;
+    background-image: linear-gradient(#23272A, #16181a);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: 86;
+    width: 100%;
+}
+.footer_whole {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-gradiant {
+    height: 45px;
+    background: linear-gradient(to bottom, #23272A 0%, #16181a 100%);
+  }
+.header-gradiant {
+    height: 35px;
+    background: linear-gradient(to top, #23272A 0%, #16181a 100%);
 }

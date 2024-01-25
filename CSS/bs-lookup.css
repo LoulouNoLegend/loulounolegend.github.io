@@ -1,6 +1,6 @@
 body {
   margin: 0px;
-  color: rgb(255, 255, 255);
+  color: hsl(0, 0%, 100%);
   background-color: #222;
   text-align: center;
 }
@@ -85,4 +85,13 @@ header {
 .space {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.footer-gradiant {
+  height: 45px;
+  background: linear-gradient(to bottom, #222 0%, #16181a 100%);
+}
+.header-gradiant {
+  height: 35px;
+  background: linear-gradient(to top, #375a7f 0%, #16181a 100%);
 }
