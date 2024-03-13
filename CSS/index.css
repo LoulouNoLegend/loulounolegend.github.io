@@ -2,139 +2,85 @@
     --Blurple: #5865F2;
     --Bluuuuuuuue: #0096FF;
     --Faded-Blurple: #7289da;
-    --Grayple: #99AAb5;
-    --Darky: #1e2124;
-    --ItsBlack: #23272A;
-    --Boxes: #36393e;
-    --LessDarky: #282b30;
-    --VeryDark: #23272A;
+    --white: #f5f5f5;
+    --gray: #36393e;
+    --light-gray: #969696;
+    --main-background: #23272A;
 }
-body {
-    background-color: var(--ItsBlack);
-    color: white;
-    align-items: center;
-    width: 100%;
-    margin: 0px;
+
+html, body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
+    font-family: Teko, sans-serif;
+    
+    background-color: var(--main-background);
+    color: var(--white);
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 a {
-    color: var(--Bluuuuuuuue);
+    color: var(--Blurple);
+    text-decoration: none;
+    transition: filter 0.2s;
 }
-.whole_body {
-    background-color: var(--ItsBlack);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
+
+a:hover {
+    filter: brightness(150%);
 }
-.rounded-button {
-    background-color: var(--Blurple);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-}
-.rounded-button:hover {
-    background-color: var(--Faded-Blurple);
-}
-.header {
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.header, .footer {
-    background-color: var(--ItsBlack);
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-}
-.box {
-    display: grid;
-    background-color: var(--Boxes);
-    border-radius: 10px;
-    margin: 20px;
-    text-align: center;
-    width: 40%;
-}
-.info_box {
-    background-color: var(--Boxes);
-    border-radius: 10px;
-    margin: 20px;
-    text-align: center;
-    width: 40%;
-}
-.info_box img {
-    max-width: 100%;
-    max-height: 100%;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-.questions_box {
-    background-color: var(--Boxes);
-    border-radius: 10px;
-    margin: 20px;
-    padding-bottom: 15px;
-    text-align: center;
-    width: 50%;
-}
-.box img {
-    max-width: 100%;
-    max-height: 100%;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-.news {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    width: 75%;
-    border-radius: 10px;
-    background-color: var(--LessDarky);
-}
-.small-boxes {
-    display: flex;
-    background-color: var(--LessDarky);
-    flex-direction: column;
-    align-items: end;
-    width: 70%;
-    border: 0px solid white;
-}
-.small-boxes img {
-    max-width: 100%;
-    max-height: 100%;
-}
-.small-boxes p {
-    font-size: 10;
-    color: var(--Grayple);
-}
-.espace_libre {
-    margin: auto;
-}
-.news .large-box {
-    width: 100%;
-}
-.flex-container {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-.footer {
+
+.container {
     display: flex;
     justify-content: center;
 }
-.footer .box {
-    width: 50%;
+
+.container {
+    margin: 0 10px
 }
 
-.footer-gradiant {
-    height: 45px;
-    background: linear-gradient(to bottom, #23272A 0%, #16181a 100%);
-  }
-.header-gradiant {
-    height: 35px;
-    background: linear-gradient(to top, #23272A 0%, #16181a 100%);
+.content-left {
+    flex: 1;
+    max-width: 50vw;
+}
+
+.content-right {
+    flex: 1;
+    max-width: 50vw;
+}
+
+.category-box {
+    border-radius: 10px;
+    background-color: var(--gray);
+    padding: 0.5em 1em;
+    margin-bottom: 10px;
+    min-height: 150px;
+
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    background-size: cover;
+    margin-right: 16px;
+    transition: transform 0.5s;
+}
+
+.category-image:hover {
+    transform: scale(1.1);
+}
+
+.category-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
 }

@@ -1,120 +1,135 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html><head>
     <title>LoulouNoLegend's Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My Projects!">
 
-    <link rel="stylesheet" href="CSS/index.css">
+
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="OtherFiles/base.css">
     <script src="OtherFiles/base.js"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teko">
+
+    <meta name="og:title" content="LoulouNoLegend's Page">
+    <meta name="og:site_name" content="LoulouNoLegend's Page">
+    <meta name="og:type" content="product">
+    <meta name="og:url" content="https://loulounolegend.github.io/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="LoulouNoLegend's Page">
+    <meta name="twitter:description" content="My Projects!">
+    <meta name="twitter:site" content="@LoulouNoLegend">
 </head>
 
-<header>
-    <div class="navbar_header">
-        <div class="navbar_logo-name">
-            <a href="index.html"><img src="images/LNL_pfp.gif" alt="Logo" height="300px"></a>
-            <h1>LoulouNoLegend's page</h1>
-        </div>
-        <div class="navbar_dropdown">
-            <div class="navbar_menu-icon">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="navbar_dropdown-content">
-                <a href=""><p class="currentpage">Home</p></a>
-                <a href="bs-lookup.html"><p class="">Beat Saver Map Lookup</p></a>
-            </div>
-        </div>
-    </div>
-    <div class="header-gradiant"></div>
-</header>
-
 <body>
-    <div class="whole_body">
-    <div class="header">
-        <br>
-        <!-- <a href="page.html">
-            <button class="rounded-button">Button</button>
-        </a> -->
-    </div>
+    <header>
+        <div class="navbar_header">
+            <div class="navbar_logo-name">
+                <a href="index.html"><img src="images/LNL_pfp.gif" alt="Logo" height="300px"></a>
+                <h1>LoulouNoLegend's page</h1>
+            </div>
+            <div class="navbar_dropdown">
+                <div class="navbar_menu-icon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="navbar_dropdown-content">
+                    <a href=""><p class="currentpage">Home</p></a>
+                    <a href="bs-lookup.html"><p class="">Beat Saver Map Lookup</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="header-gradiant"></div>
+    </header>
 
-    <h2>Welcome to my page where you can find my projects or other things I worked on!</h2>
+    <div class="container">
+        <div class="content-left">
+            <h1 id="-welcome-to-my-github-">Welcome to my page!</h1>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+            <h4>It's here that you can see some of my projects! <br> (There's some more things on my github.)</h4>
 
-    <p>To be fair, there's like.. nothing yet here.</p>
+            <h2 id="-programming-languages-i-use">Programming Languages I Use</h2>
+            <hr style="width:50%; text-align:left; margin-left:0">
+            <h3 id="for-general-projects">For General Projects</h3>
+            <ul>
+            <li><img alt="C++" src="https://img.shields.io/badge/C%2B%2B-4183c4?logo=c%2B%2B&logoColor=white"></li>
+            <li><a href="https://www.python.org/downloads/"><img alt="Python" src="https://img.shields.io/badge/Python-14354C.svg?logo=python&logoColor=white"></a> (I&#39;m bad with it, tbh)</li>
+            </ul>
+
+            <h3 id="for-web-related-projects">For Web-related Projects</h3>
+            <ul>
+            <li><img alt="HTML" src="https://img.shields.io/badge/HTML-E34F26.svg?logo=html5&logoColor=white"></li>
+            <li><img alt="CSS" src="https://img.shields.io/badge/CSS-1572B6.svg?logo=css3&logoColor=white"></li>
+            <li><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=javascript&logoColor=white"></li>
+            </ul>
+            <p><strong>NOTE:</strong> I do know some C#, but simply because I modified some projects made with it and because C++ is similar in some ways.</p>
+
+            <h2 id="-softwares-i-use-for-programming">Softwares I Use for Programming</h2>
+            <hr style="width:50%; text-align:left; margin-left:0">
+
+            <ul>
+            <li><a href="https://visualstudio.microsoft.com/vs/community/"><img alt="Visual Studio Community 2022" src="https://img.shields.io/badge/Visual%20Studio%20Community%202022-a175d9?logo=visual%20studio"></a> - C++</li>
+            <li><a href="https://code.visualstudio.com/"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white"></a> - HTML, CSS &amp; JS</li>
+            </ul>
+            <p>I have nothing else to say here at the moment!</p>
+
+        </div>
     
-
-    <!-- <div class="flex-container">
-        <div class="info_box">
-            <img src="images/random_placeholder.png" alt="Microsoft Visual Studio">
-            <h2>I mean big text bro</h2>
-            <p>naaaaaah</p>
+        <div class="content-right">
+            <h1>Categories of my projects</h1>
+            <div id="project-list">
+                
+            <div class="category-box">
+        <div class="category-container">
+            <div class="category-image" style="background-image: url('images/apps.png');"></div>
+            <h2><a href="">Apps</a></h2>
         </div>
-        <div class="info_box">
-            <img src="images/random_placeholder.png" alt="C++">
-            <h2>Title?/h2>
-            <p>frrrr</p>
-        </div>  
-        <div class="info_box">
-            <img src="images/random_placeholder.png" alt="Program">
-            <h2>Text again</h2>
-            <p>Some text</p>
-        </div>
-    </div> -->
+        <p>All the apps I did!</p>
 
-    <!-- <h1>Nouvelles</h1>
-    <div class="news">
-        <div class="large-box box">
-            <img src="images/random_placeholder.png" alt="Big alt text" height="">
-            <h2>big title</h2>
-            <p>Random desc</p>
+    </div><div class="category-box">
+        <div class="category-container">
+            <div class="category-image" style="background-image: url('images/rouage.png');"></div>
+            <h2><a href="javascript:void(0)">Modding</a></h2>
         </div>
-         <div class="small-boxes">
-            <div class="box">
-                <img src="images/random_placeholder.png" alt="box1">
-                <h3>Text</h3>
-                <p>Source: <a href="link ig">Source</a></p>
-            </div>
-            <div class="box">
-                <img src="" alt="">
-                <h3></h3>
-            </div>
-            <div class="box">
-                <img src="" alt="">
-                <h3></h3>
-            </div>
+        <p>I make mods for some games. Check them out!</p>
+
+    </div><div class="category-box">
+        <div class="category-container">
+            <div class="category-image" style="background-image: url('images/flag.png');"></div>
+            <h2><a href="">Translation</a></h2>
         </div>
-    </div> -->
+        <p>I'm the french translator of some projects.. I recommend checking them out!</p>
 
-</body>
-
-<footer>
-    <div class="footer_whole">
-
-        <div class="footer-gradiant"></div>
-        
-        <div class="footerbar_footer">
-            <div class="footerbar_logo">
-                <!-- <img src="images/LNL_pfp.gif" alt="Logo" height="50px"> -->
-                <p>©2024 LoulouNoLegend. All rights reserved.</p>
-                <!-- <p><a href="#">Conditions d'utilisation</a> • <a href="#">Politique de confidentialité</a></p> -->
-            </div>
-            <div class="footerbar_social">
-                <a href="https://github.com/LoulouNoLegend"><img src="images/github.png" alt="Github" width="40px"></a>
-                <a class="discord-logo" href="https://discordapp.com/users/421740856303812630"><img src="images/discord.png" alt="Discord User" width="40px"></a>
-                <a href="https://www.youtube.com/channel/UClrvcohSvuff6DwONpFgx9w"><img src="images/youtube.webp" alt="YouTube" width="40px"></a>
-            </div>
-        </div>
     </div>
-</footer>
+    </div>
+    </div>
+    </div>
+    
+    <script>
+        loadProjectList('project-list', 3);
+    </script>
 
-</html>
+    <footer>
+        <div class="footer_whole">
+    
+            <div class="footer-gradiant"></div>
+            
+            <div class="footerbar_footer">
+                <div class="footerbar_logo">
+                    <!-- <img src="images/LNL_pfp.gif" alt="Logo" height="50px"> -->
+                    <p>© 2024 LoulouNoLegend</p>
+                    <!-- <p><a href="#">Conditions d'utilisation</a> • <a href="#">Politique de confidentialité</a></p> -->
+                </div>
+                <div class="footerbar_social">
+                    <a href="https://github.com/LoulouNoLegend"><img src="images/github.png" alt="Github" width="40px"></a>
+                    <a class="discord-logo" href="https://discordapp.com/users/421740856303812630"><img src="images/discord.png" alt="Discord User" width="40px"></a>
+                    <a href="https://www.youtube.com/channel/UClrvcohSvuff6DwONpFgx9w"><img src="images/youtube.webp" alt="YouTube" width="40px"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body></html>
