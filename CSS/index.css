@@ -46,12 +46,18 @@ a:hover {
 
 .content-left {
     flex: 1;
-    max-width: 50vw;
+    max-width: 50%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 70vh;
 }
 
 .content-right {
     flex: 1;
-    max-width: 50vw;
+    max-width: 50%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-height: 70vh;
 }
 
 .category-box {
@@ -83,4 +89,12 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: start;
+}
+.footer-gradiant {
+    height: 45px;
+    background: linear-gradient(to bottom, #23272A 0%, #16181a 100%);
+  }
+.header-gradiant {
+    height: 35px;
+    background: linear-gradient(to top, #23272A 0%, #16181a 100%);
 }
